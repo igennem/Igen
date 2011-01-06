@@ -18,7 +18,7 @@ describe User do
     User.create!(@attr)
   end
 
-  it "should require a name"
+  it "should require a name" do
     no_name_user = User.new(@attr.merge(:name => ""))
     no_name_user.should_not be_valid
   end
@@ -124,7 +124,6 @@ describe User do
         matching_user.should == @user
       end
     end
-
   end
 end
 
